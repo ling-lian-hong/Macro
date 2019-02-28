@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        private Node rootNode;
+        static void Main(string[] args)
+        {
+            Program b = new Program();
+       int[] nums = { 4, 1, 2, 1, 2 };
+           Console.WriteLine( b.SingleNumber(nums));
+            Console.ReadKey();
+        }
+           public int SingleNumber(int[] nums) {
+            int a = nums[0];
+            for (int i = 1; i < nums.Length; i++)
+            {
+                a = a ^ nums[i];
+            }
+            return a;
+        }
+    }
+
+
+}
